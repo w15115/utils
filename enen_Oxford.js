@@ -80,16 +80,7 @@ class encn_Oxford {
 
         let dicturl = base + `&query=${word}&sign=${sign}&token=${this.token}`;
         let data = '';
-        try {
-            data = JSON.parse(await api.fetch(dicturl));
-            let oxford = getOxford(data);
-            let bdsimple = ''; //Combine Youdao Concise English-Chinese Dictionary to the end.
-            let bstrans = ''; //Combine Youdao Translation (if any) to the end.
-            return [].concat(oxford, bdsimple, bstrans);
 
-        } catch (err) {
-            return [];
-        }
 
         function getBDTrans(data) {
             try {
