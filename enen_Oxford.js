@@ -83,8 +83,8 @@ class encn_Oxford {
         try {
             data = JSON.parse(await api.fetch(dicturl));
             let oxford = getOxford(data);
-            let bdsimple = oxford.length ? [] : getBDSimple(data); //Combine Youdao Concise English-Chinese Dictionary to the end.
-            let bstrans = oxford.length || bdsimple.length ? [] : getBDTrans(data); //Combine Youdao Translation (if any) to the end.
+            let bdsimple = ''; //Combine Youdao Concise English-Chinese Dictionary to the end.
+            let bstrans = ''; //Combine Youdao Translation (if any) to the end.
             return [].concat(oxford, bdsimple, bstrans);
 
         } catch (err) {
