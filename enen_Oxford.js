@@ -10,7 +10,7 @@ class encn_Oxford {
     }
 
     async displayName() {
-        return 'Oxford ENG->ENG Dictionary';
+        return 'NTP Oxford ENG->ENG Dictionary';
     }
 
 
